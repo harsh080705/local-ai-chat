@@ -1,12 +1,11 @@
 {
   "name": "local-ai-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express backend server for Local AI Gemma Chat",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
