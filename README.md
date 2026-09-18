@@ -1,99 +1,73 @@
-# 🤖 Local AI Chat App (React + Node.js + LM Studio / Gemma)
+# Local AI Chat App | Privacy-First Conversational AI
 
-A full-stack web application that allows you to chat locally with open-source AI models (such as **Gemma**, **Llama**, **Mistral**, etc.) using **LM Studio** and **React**.
+A full-stack local AI chat application that lets users interact with open-source language models using LM Studio or similar OpenAI-compatible local runtimes. The system is designed for privacy-first AI usage without relying on external cloud APIs.
 
-No cloud API keys or internet connection required — your data stays 100% private on your machine!
+> GitHub: https://github.com/harsh080705/local-ai-chat
 
----
+## ATS-Friendly Summary
 
-## 🏗️ Architecture
+Full-stack JavaScript application for local AI chatbot experiences using React, Express, and local model hosting. Demonstrates integration with open-source LLMs, private AI workflows, chat history, API proxying, and modern frontend development principles.
 
+## Keywords
+
+Local AI, Open-Source LLM, LM Studio, Ollama, React, Node.js, Express, AI Chatbot, Privacy-First AI, Generative AI, Vite, JavaScript, Full-Stack
+
+## Features
+
+- Local LLM integration
+- Multi-turn conversation memory
+- Real-time backend health checks
+- AI chat interface with modern dark theme
+- No external API key required
+- Environment-based configuration
+
+## Architecture
+
+```bash
+React Frontend -> Express Backend -> LM Studio / OpenAI-compatible local model
 ```
-┌─────────────────────────┐       ┌─────────────────────────┐       ┌─────────────────────────┐
-│                         │       │                         │       │                         │
-│     React Frontend      │ ───►  │     Express Backend     │ ───►  │        LM Studio        │
-│  (local-ai-frontend)    │       │   (local-ai-backend)    │       │   (Local LLM Server)    │
-│    http://localhost:5173│       │    http://localhost:5000│       │    http://localhost:1234│
-└─────────────────────────┘       └─────────────────────────┘       └─────────────────────────┘
-```
 
-- **Frontend**: React 19 + Vite (Dark mode UI, conversation history, real-time backend health check, auto-scroll).
-- **Backend**: Express.js middleware (Manages API routes, handles CORS, proxies chat completions, multi-turn history formatting).
-- **Local AI Server**: LM Studio exposing an OpenAI-compatible endpoint at `http://localhost:1234`.
+## Tech Stack
 
----
+| Layer | Technology |
+| --- | --- |
+| Frontend | React 19, Vite |
+| Backend | Express.js, Node.js |
+| AI Runtime | LM Studio / local LLM server |
+| Language | JavaScript |
 
-## ⚡ Prerequisites
+## Quick Start
 
-Before running the application, make sure you have installed:
+### 1. Start the local LLM server
 
-1. **[Node.js](https://nodejs.org/)** (v18 or higher)
-2. **[LM Studio](https://lmstudio.ai/)** (or any local LLM runner with OpenAI API compatibility like Ollama or vLLM).
+Open LM Studio and run a model locally.
 
----
-
-## 🚀 Quick Start Guide
-
-### Step 1: Start LM Studio Local Server
-1. Open **LM Studio** and download a model (e.g., `Gemma 2B / 7B`, `Llama 3`, or `Mistral`).
-2. Go to the **Local Server** tab (the icon on the left sidebar).
-3. Select your model and click **Start Server**.
-4. Ensure the server is listening at `http://localhost:1234`.
-
----
-
-### Step 2: Set Up & Run Backend
-Open a terminal in the root directory:
+### 2. Start backend
 
 ```bash
 cd local-ai-backend
 npm install
 npm run start
 ```
-The Express backend server will start at `http://localhost:5000`.
 
----
-
-### Step 3: Set Up & Run Frontend
-Open a new terminal window:
+### 3. Start frontend
 
 ```bash
 cd local-ai-frontend
 npm install
 npm run dev
 ```
-Open your browser and navigate to `http://localhost:5173`.
+
+Open: http://localhost:5173
+
+## Why This Project Matters
+
+This project is ideal for showcasing AI application development, local inference workflows, and privacy-first product thinking. It reinforces skill in frontend/backend integration and practical AI deployment patterns.
+
+## License
+
+MIT
 
 ---
 
-## ⚙️ Environment Variables
-
-Both backend and frontend support optional `.env` configuration files.
-
-### Backend (`local-ai-backend/.env`)
-```env
-PORT=5000
-LM_STUDIO_URL=http://localhost:1234/v1/chat/completions
-```
-
-### Frontend (`local-ai-frontend/.env`)
-```env
-VITE_API_URL=http://localhost:5000
-```
-
----
-
-## ✨ Features
-
-- 💬 **Multi-Turn Conversation Memory**: Retains chat history for context-aware responses.
-- 🟢 **Live Health Monitoring**: Automatically checks connection status of the backend and local AI server.
-- 📜 **Auto-Scrolling**: Keeps newest messages in view as chat length grows.
-- 🔒 **100% Local & Private**: No data sent to third-party cloud APIs.
-- 🎨 **Dark Theme**: Modern, sleek interface built for developer productivity.
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
+Built to demonstrate private, local-first AI interactions and modern JavaScript full-stack engineering.
