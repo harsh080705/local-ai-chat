@@ -1,73 +1,82 @@
-# Local AI Chat App | Privacy-First Conversational AI
+# 🤖 Local AI Chat — Privacy-First Conversational AI Application
 
-A full-stack local AI chat application that lets users interact with open-source language models using LM Studio or similar OpenAI-compatible local runtimes. The system is designed for privacy-first AI usage without relying on external cloud APIs.
+![React 19](https://img.shields.io/badge/React-19.0-61dafb?style=flat-square&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=nodedotjs)
+![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?style=flat-square&logo=express)
+![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=flat-square&logo=vite)
+![Ollama / LM Studio](https://img.shields.io/badge/Local_AI-LM_Studio_%2F_Ollama-FF6F00?style=flat-square&logo=openai)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
-> GitHub: https://github.com/harsh080705/local-ai-chat
+> A full-stack, privacy-first conversational AI web application enabling seamless interaction with local open-source Large Language Models (LLMs) via LM Studio or Ollama OpenAI-compatible local APIs.
 
-## ATS-Friendly Summary
+---
 
-Full-stack JavaScript application for local AI chatbot experiences using React, Express, and local model hosting. Demonstrates integration with open-source LLMs, private AI workflows, chat history, API proxying, and modern frontend development principles.
+## 🎯 ATS & Resume Highlights (Copy & Paste for Resume)
 
-## Keywords
+> - **Engineered Privacy-First Local AI Web Application** using **React 19, Express.js, and Node.js**, eliminating cloud latency and third-party data transmission.
+> - **Architected API Proxy Layer** connecting frontend interfaces with local LLM runtimes (LM Studio / Ollama), handling streaming responses and health checks.
+> - **Implemented Client-Side Chat Memory & State Management**, managing multi-turn context retention and dynamic markdown rendering.
 
-Local AI, Open-Source LLM, LM Studio, Ollama, React, Node.js, Express, AI Chatbot, Privacy-First AI, Generative AI, Vite, JavaScript, Full-Stack
+---
 
-## Features
+## 🌟 Key Features
 
-- Local LLM integration
-- Multi-turn conversation memory
-- Real-time backend health checks
-- AI chat interface with modern dark theme
-- No external API key required
-- Environment-based configuration
+- 🔒 **100% Data Privacy**: Inferences are executed locally on client machine—zero data sent to external cloud servers.
+- ⚡ **Real-Time Response Streaming**: Low-latency token streaming and health monitoring.
+- 💬 **Multi-Turn Context Memory**: Dynamic conversation state retention across model turns.
+- 🎨 **Modern Dark-Mode UI**: Built with React 19 and Vite for instant load times and clean user experience.
+- 🔌 **OpenAI-Compatible Local Runtime**: Compatible with LM Studio, Ollama, LocalAI, and vLLM.
 
-## Architecture
+---
 
-```bash
-React Frontend -> Express Backend -> LM Studio / OpenAI-compatible local model
+## 🛠️ Tech Stack & Architecture
+
+```
+[ React 19 Frontend (Vite) ]  <--->  [ Express API Gateway Proxy ]  <--->  [ LM Studio / Ollama Local LLM Server ]
 ```
 
-## Tech Stack
+| Component | Technology | Role |
+|:---|:---|:---|
+| **Frontend** | React 19, Vite, JavaScript | Interactive Chat UI & State Management |
+| **Backend** | Express.js, Node.js | CORS management & Local AI API Proxying |
+| **Local AI Engine** | LM Studio / Ollama / LocalAI | Offline LLM Inference Server |
 
-| Layer | Technology |
-| --- | --- |
-| Frontend | React 19, Vite |
-| Backend | Express.js, Node.js |
-| AI Runtime | LM Studio / local LLM server |
-| Language | JavaScript |
+---
 
-## Quick Start
+## 📁 Repository Structure
 
-### 1. Start the local LLM server
+```
+local-ai-chat/
+├── local-ai-frontend/   # React 19 + Vite chat interface
+├── local-ai-backend/    # Express REST proxy server
+└── README.md
+```
 
-Open LM Studio and run a model locally.
+---
 
-### 2. Start backend
+## 🚀 Quick Start
 
+### 1. Start Local LLM Runtime
+Ensure [LM Studio](https://lmstudio.ai/) or [Ollama](https://ollama.ai/) is running on port `1234` or `11434`.
+
+### 2. Start Backend Proxy
 ```bash
 cd local-ai-backend
 npm install
 npm run start
 ```
 
-### 3. Start frontend
-
+### 3. Start Frontend Interface
 ```bash
 cd local-ai-frontend
 npm install
 npm run dev
 ```
 
-Open: http://localhost:5173
-
-## Why This Project Matters
-
-This project is ideal for showcasing AI application development, local inference workflows, and privacy-first product thinking. It reinforces skill in frontend/backend integration and practical AI deployment patterns.
-
-## License
-
-MIT
+Open browser at `http://localhost:5173`.
 
 ---
 
-Built to demonstrate private, local-first AI interactions and modern JavaScript full-stack engineering.
+## 📝 License
+
+Distributed under the **MIT License**. See `LICENSE` for details.
